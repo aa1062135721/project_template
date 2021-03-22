@@ -1,0 +1,141 @@
+/* 改变主题色变量 */
+$--color-primary: #2F547E;
+
+/* 改变错误主题色变量 */
+$--color-danger: #a94442;
+
+/* 改变 icon 字体路径变量，必需 */
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+@import "~element-ui/packages/theme-chalk/src/index";
+
+.el-alert {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid $--color-primary;
+
+  &--error {
+    background-color: #f2dede !important;
+    border-color: #ebccd1;
+  }
+}
+
+.el-button--mini {
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: none;
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+  min-width: auto;
+  transition: all 0.3s ease;
+}
+
+.el-button--primary.is-plain {
+  border: 1px solid #00b78c;
+  color: #00b78c;
+  background: #fff;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: #00b78c;
+    border-color: #00b78c;
+    color: #fff;
+  }
+}
+
+.el-button--danger.is-plain {
+  border: 1px solid #ed5565;
+  color: #ed5565;
+  background: #fff;
+
+  &:hover,
+  &:focus,
+  &:active {
+    background: #ed5565;
+    border-color: #ed5565;
+    color: #fff;
+  }
+}
+
+.el-button+.el-button {
+  margin-left: 5px;
+}
+
+.el-checkbox {
+  .el-checkbox__inner {
+    width: 22px;
+    height: 22px;
+    border: 0;
+    border-radius: 0;
+    transition: none;
+    background: url(icheck.png) no-repeat;
+    background-size: 240px 24px;
+    background-position: 0 0;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &:hover .el-checkbox__inner {
+    background-position: -24px 0;
+  }
+
+  &.is-checked .el-checkbox__inner {
+    background-position: -48px 0;
+  }
+
+  &.is-disabled .el-checkbox__inner {
+    background-color: #fff;
+    background-position: -72px 0;
+  }
+
+  &.is-disabled.is-checked .el-checkbox__inner {
+    background-position: -96px 0;
+  }
+}
+
+.el-radio {
+  .el-radio__inner,
+  &.is-checked .el-radio__inner,
+  &.is-disabled .el-radio__inner,
+  &.is-disabled.is-checked .el-radio__inner {
+    width: 22px;
+    height: 22px;
+    border: 0;
+    border-radius: 0;
+    transition: none;
+    background: url(icheck.png) no-repeat;
+    background-size: 240px 24px;
+    background-position: -120px 0;
+    border-radius: 50%;
+    overflow: hidden;
+
+    &:after {
+      display: none;
+    }
+  }
+
+  &:hover .el-radio__inner {
+    background-position: -144px 0;
+  }
+
+  &.is-checked .el-radio__inner {
+    background-position: -168px 0 !important;
+  }
+
+  &.is-disabled .el-radio__inner {
+    background-position: -192px 0 !important;
+  }
+
+  &.is-disabled.is-checked .el-radio__inner {
+    background-position: -216px 0 !important;
+  }
+}
+
+.el-checkbox__label,
+.el-radio__label {
+  padding-left: 3px;
+}
